@@ -63,5 +63,13 @@ namespace DriveCatalog.AdminWindows.DriveChars
             MessageBox.Show(DataWorker.Execute($"EXECUTE dbo.UpdateCapacity '{manuf}', " +
                 $"'{model}', '{type}', {scap}, {ecap}"));
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

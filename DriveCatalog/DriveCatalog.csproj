@@ -49,6 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminWindows\Devices\AddDeviceWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminWindows\Devices\AddDeviceWindow.Designer.cs">
+      <DependentUpon>AddDeviceWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWindows\Devices\DeleteDeviceWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminWindows\Devices\DeleteDeviceWindow.Designer.cs">
+      <DependentUpon>DeleteDeviceWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWindows\Devices\UpdateDrivesCountWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminWindows\Devices\UpdateDrivesCountWindow.Designer.cs">
+      <DependentUpon>UpdateDrivesCountWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminWindows\DriveChars\AddDriveCharsWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +144,15 @@
     <Compile Include="UserWindows\UserWindow.Designer.cs">
       <DependentUpon>UserWindow.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminWindows\Devices\AddDeviceWindow.resx">
+      <DependentUpon>AddDeviceWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminWindows\Devices\DeleteDeviceWindow.resx">
+      <DependentUpon>DeleteDeviceWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminWindows\Devices\UpdateDrivesCountWindow.resx">
+      <DependentUpon>UpdateDrivesCountWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminWindows\DriveChars\AddDriveCharsWindow.resx">
       <DependentUpon>AddDriveCharsWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +195,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserWindows\UserWindow.resx">
+      <DependentUpon>UserWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -182,8 +212,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AdminWindows\Devices\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

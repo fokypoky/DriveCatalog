@@ -39,5 +39,13 @@ namespace DriveCatalog.AdminWindows.Information
                 $"{volume}"));
 
         }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
